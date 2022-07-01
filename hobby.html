@@ -1,0 +1,581 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- main style -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Hobby Stars</title>
+  </head>
+
+  <style type="text/css">
+
+
+    *{
+     margin: 0px;
+     padding: 0px;
+    }
+    body{
+     font-family: arial;
+    }
+    .main{
+    
+     margin: 3%;
+    }
+    
+    .card{
+         width: 10%;
+         display: inline-flex;
+        transform: translate(270%);
+    
+         box-shadow: 2px 2px 8px black;
+         border-radius: 10px; 
+         margin: 2%;
+         height: 20%;
+        }
+    
+    .image img{
+      width: 80%;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      
+    
+     
+     }
+    
+    .title{
+     
+      text-align: center;
+      padding: 10px;
+      
+     }
+    
+    h1{
+      font-size: 20px;
+     }
+    
+    .des{
+      padding: 3px;
+      text-align: center;
+     
+      padding-top: 10px;
+            border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    
+    
+    </style>
+
+
+
+
+  <body class="bg-gray postion-relative">
+    <!-- ================= Appbar ================= -->
+    <div
+      class="bg-white d-flex align-items-center fixed-top shadow"
+      style="min-height: 56px; z-index: 5"
+    >
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- logo -->
+          <div class="col d-flex align-items-center">
+            <!-- logo -->
+            <a href="home.html">
+              <i class="fa fa-star text-warning" style="font-size: 3rem"></i>   
+            </a>
+            <h4  style="margin-top: auto; font-family: 'Times New Roman', Times, serif; padding-left: 1%;">Hobby Stars</h4>
+           
+           
+            
+          </div>
+          <!-- nav -->
+          <div class="col d-none d-xl-flex justify-content-center">
+             <!-- home -->
+             <div class="mx-4 nav__btn ">
+                <a href="home.html" class="btn px-4">
+                  <i class="fas fa-home text-muted fs-4"></i>
+                </a>
+                
+              </div>
+              <!-- bookmark -->
+            
+                <div class="mx-4 nav__btn ">
+                  <a href="save.html" class="btn px-4">
+                    <i class="fas fa-bookmark text-muted fs-4"></i>
+                  </a>
+  
+              </div>
+              
+  
+                   <!-- hoby -->
+                   <div class="mx-4 nav__btn nav__btn-active">
+                    <a href="hobby.html" class="btn px-4">
+                      <i class="fas fa-star text-muted fs-4"></i>
+                    </a>
+    
+                </div>
+  
+  
+              <!-- notification -->
+              <div class="mx-4 nav__btn ">
+                <a href="notification.html" class="btn px-4">
+                  <i class="fas fa-bell text-muted fs-4"></i>
+                </a>
+  
+            </div>
+  
+  
+              <!-- profile -->
+              <div class="mx-4 nav__btn ">
+                <a href="profile.html" class="btn px-4">
+                  <i class="fas fa-user text-muted fs-4"></i>
+                </a>
+  
+            </div>
+
+          </div>
+
+
+         
+            <!-- Search bar and Drop-down menu -->
+                <!-- search -->
+          <div class="col d-flex align-items-center">
+       
+           
+            <!-- search bar -->
+            <div class="input-group ms-2" type="button">
+              <!-- mobile -->
+              <span
+                class="input-group-prepend d-lg-none"
+                id="searchMenu"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="outside"
+              >
+                <div
+                  class="input-group-text bg-gray border-0 rounded-circle"
+                  style="min-height: 40px"
+                >
+                  <i class="fas fa-search text-muted"></i>
+                </div>
+              </span>
+              <!-- desktop -->
+              <span
+                class="input-group-prepend d-none d-lg-block"
+                id="searchMenu"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="outside"
+              >
+                <div
+                  class="input-group-text bg-gray border-0 rounded-pill"
+                  style="min-height: 40px; min-width: 280px; margin-left: 65%;"
+                >
+                  <i class="fas fa-search me-2 text-muted"></i>
+                  <p class="m-0 fs-7 text-muted">Search Hobby</p>
+                </div>
+              </span>
+              <!-- search menu -->
+              <ul
+                class="dropdown-menu overflow-auto border-0 shadow p-3"
+                aria-labelledby="searchMenu"
+                style="width: 30em; max-height: 600px;"
+              >
+                <!-- search input -->
+                <li>
+                  <input
+                    type="text"
+                    class="rounded-pill border-0 bg-gray dropdown-item"
+                    placeholder="Search Hobby Stars..."
+                    autofocus
+                  />
+                </li>
+                <!-- search 1 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/1"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+                <!-- search 2 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/2"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+                <!-- search 3 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/3"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <div
+              class="
+                rounded-circle
+                p-1
+                bg-gray
+                d-flex
+                align-items-center
+                justify-content-center
+                mx-2
+              "
+              style="width: 38px; height: 38px"
+              type="button"
+              id="secondMenu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+
+
+            <!-- For Logout and Feedback -->
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <!-- secondary menu dd -->
+            <ul
+              class="dropdown-menu border-0 shadow p-3"
+              aria-labelledby="secondMenu"
+              style="width: 23em"
+            >
+            
+            
+              <hr />
+              <!-- feedback -->
+            
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      href="ContactFrom/index.html"
+                      class="d-flex text-decoration-none text-dark"
+                    >
+                      <i class="fas fa-cog bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="
+                          ms-3
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          w-100
+                        "
+                      >
+                        <p class="m-0">Give Feedback
+                       </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              </li>
+              <hr />
+              
+                 
+              <!-- LogOut -->
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      href="./home.html"
+                      class="d-flex text-decoration-none text-dark"
+                    >
+                      <i class="fas fa-cog bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="
+                          ms-3
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          w-100
+                        "
+                      >
+                        <p class="m-0">Log Out</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- end -->
+          </div>
+        </div>
+        
+       
+      </div>
+      <div class="main">
+
+        <!--cards 1-->
+        <a href="gamepage.html" style="text-decoration: none;">
+            <div class="card">
+       
+                <div class="image" style="display: flex; justify-content: center;">
+                   <img src="images/joystick.png" alt="..">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Gaming</h1>
+                </div>
+                
+                </div>
+            
+        </a>
+       
+      
+       <!--cards 2-->
+       <a href="" style="text-decoration: none;">
+        <div class="card" >
+       
+            <div class="image"style="display: flex; justify-content: center;">
+               <img src="images/meditation.png">
+            </div>
+            <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+             <h1>Meditation</h1>
+            </div>
+            </div>
+       </a>
+       
+      
+       <!--cards 3 --> 
+       <a href="" style="text-decoration: none;">
+        <div class="card" >
+       
+            <div class="image"style="display: flex; justify-content: center;">
+               <img src="images/cooking.png">
+            </div>
+            <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+             <h1>Cooking</h1>
+            </div>
+            </div>
+       </a> <br>
+
+
+        <!--cards 4 --> 
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/dance.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Dancing</h1>
+                </div>
+                </div>
+           </a>
+
+
+         <!--cards 5 -->   
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/music.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Music</h1>
+                </div>
+                </div>
+           </a>
+
+        <!--cards 6 -->
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/painting.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Painting</h1>
+                </div>
+                </div>
+           </a> <br>
+
+           <!--cards 7 --> 
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/book.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Reading</h1>
+                </div>
+                </div>
+           </a>
+
+
+         <!--cards 8-->   
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/gardening.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Gardening</h1>
+                </div>
+                </div>
+           </a>
+
+        <!--cards 9 -->
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/photographer.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Photography</h1>
+                </div>
+                </div>
+           </a> <br>
+
+           
+         <!--cards 10-->   
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/theatre.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Acting</h1>
+                </div>
+                </div>
+           </a>
+
+           
+         <!--cards 11-->   
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/vlogger.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Vlogger</h1>
+                </div>
+                </div>
+           </a>
+
+           
+         <!--cards 12-->   
+        <a href="" style="text-decoration: none;">
+            <div class="card" >
+           
+                <div class="image"style="display: flex; justify-content: center;">
+                   <img src="images/sport.png">
+                </div>
+                <div class="title" style="color:black ; font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                 <h1>Sports</h1>
+                </div>
+                </div>
+           </a>
+
+
+           
+
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

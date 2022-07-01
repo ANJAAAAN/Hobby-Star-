@@ -1,0 +1,410 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- main style -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Hobby Stars</title>
+  </head>
+
+  <style type="text/css">
+    .profile-head {
+    transform: translateY(4rem)
+    }
+
+    .cover {
+    background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+    background-size: cover;
+    background-repeat: no-repeat
+    }
+
+    body {
+    min-height: 100vh;
+    overflow-x: hidden
+    }
+  </style>
+
+
+
+  <body class="bg-gray postion-relative">
+    <!-- ================= Appbar ================= -->
+    <div
+      class="bg-white d-flex align-items-center fixed-top shadow"
+      style="min-height: 56px; z-index: 5"
+    >
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- logo -->
+          <div class="col d-flex align-items-center">
+            <!-- logo -->
+            <a href="home.html">
+              <i class="fa fa-star text-warning" style="font-size: 3rem"></i>   
+            </a>
+            <h4  style="margin-top: auto; font-family: 'Times New Roman', Times, serif; padding-left: 1%;">Hobby Stars</h4>
+           
+           
+            
+          </div>
+         <!-- nav -->
+         <div class="col d-none d-xl-flex justify-content-center">
+           <!-- home -->
+           <div class="mx-4 nav__btn ">
+            <a href="home.html" class="btn px-4">
+              <i class="fas fa-home text-muted fs-4"></i>
+            </a>
+            
+          </div>
+          <!-- bookmark -->
+        
+            <div class="mx-4 nav__btn ">
+              <a href="save.html" class="btn px-4">
+                <i class="fas fa-bookmark text-muted fs-4"></i>
+              </a>
+
+          </div>
+          
+
+               <!-- star -->
+               <div class="mx-4 nav__btn ">
+                <a href="hobby.html" class="btn px-4">
+                  <i class="fas fa-star text-muted fs-4"></i>
+                </a>
+
+            </div>
+
+
+          <!-- notification -->
+          <div class="mx-4 nav__btn ">
+            <a href="notification.html" class="btn px-4">
+              <i class="fas fa-bell text-muted fs-4"></i>
+            </a>
+
+        </div>
+
+
+          <!-- profile -->
+          <div class="mx-4 nav__btn nav__btn-active">
+            <a href="profile.html" class="btn px-4">
+              <i class="fas fa-user text-muted fs-4"></i>
+            </a>
+
+        </div>
+
+          </div>
+
+
+         
+            <!-- Search bar and Drop-down menu -->
+                <!-- search -->
+          <div class="col d-flex align-items-center">
+       
+           
+            <!-- search bar -->
+            <div class="input-group ms-2" type="button">
+              <!-- mobile -->
+              <span
+                class="input-group-prepend d-lg-none"
+                id="searchMenu"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="outside"
+              >
+                <div
+                  class="input-group-text bg-gray border-0 rounded-circle"
+                  style="min-height: 40px"
+                >
+                  <i class="fas fa-search text-muted"></i>
+                </div>
+              </span>
+              <!-- desktop -->
+              <span
+                class="input-group-prepend d-none d-lg-block"
+                id="searchMenu"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="outside"
+              >
+                <div
+                  class="input-group-text bg-gray border-0 rounded-pill"
+                  style="min-height: 40px; min-width: 280px; margin-left: 65%;"
+                >
+                  <i class="fas fa-search me-2 text-muted"></i>
+                  <p class="m-0 fs-7 text-muted">Search Hobby</p>
+                </div>
+              </span>
+              <!-- search menu -->
+              <ul
+                class="dropdown-menu overflow-auto border-0 shadow p-3"
+                aria-labelledby="searchMenu"
+                style="width: 30em; max-height: 600px;"
+              >
+                <!-- search input -->
+                <li>
+                  <input
+                    type="text"
+                    class="rounded-pill border-0 bg-gray dropdown-item"
+                    placeholder="Search Hobby stars..."
+                    autofocus
+                  />
+                </li>
+                <!-- search 1 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/1"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+                <!-- search 2 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/2"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+                <!-- search 3 -->
+                <li class="my-4">
+                  <div
+                    class="
+                      alert
+                      fade
+                      show
+                      dropdown-item
+                      p-1
+                      m-0
+                      d-flex
+                      align-items-center
+                      justify-content-between
+                    "
+                    role="alert"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://source.unsplash.com/random/3"
+                        alt="avatar"
+                        class="rounded-circle me-2"
+                        style="width: 35px; height: 35px; object-fit: cover"
+                      />
+                      <p class="m-0">Lorem ipsum</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close p-0 m-0"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <div
+              class="
+                rounded-circle
+                p-1
+                bg-gray
+                d-flex
+                align-items-center
+                justify-content-center
+                mx-2
+              "
+              style="width: 38px; height: 38px"
+              type="button"
+              id="secondMenu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+
+
+            <!-- For Logout and Feedback -->
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <!-- secondary menu dd -->
+            <ul
+              class="dropdown-menu border-0 shadow p-3"
+              aria-labelledby="secondMenu"
+              style="width: 23em"
+            >
+            
+            
+              <hr />
+              <!-- feedback -->
+            
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      href="ContactFrom/index.html"
+                      class="d-flex text-decoration-none text-dark"
+                    >
+                      <i class="fas fa-cog bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="
+                          ms-3
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          w-100
+                        "
+                      >
+                        <p class="m-0">Give Feedback
+                       </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              </li>
+              <hr />
+              
+                 
+              <!-- LogOut -->
+              <li class="dropdown-item p-1 my-3 rounded" type="button">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      href="./home.html"
+                      class="d-flex text-decoration-none text-dark"
+                    >
+                      <i class="fas fa-cog bg-gray p-2 rounded-circle"></i>
+                      <div
+                        class="
+                          ms-3
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          w-100
+                        "
+                      >
+                        <p class="m-0">Log Out</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- end -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><img src="images/star.png" alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+                        <div class="media-body mb-5 text-white" >
+                            <h4 class="mt-0 mb-0">John</h4>
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i> Kathmandu</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <a href="#" class="btn btn-outline-dark btn-sm btn-block" style="width: 170px;height: 35px; margin-left: 5px;margin-top: 5px;font-size:17px;">Edit profile</a>
+           
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">About</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-italic mb-0">Web Developer</p>
+                        <p class="font-italic mb-0">Lives in Kathmandu</p>
+                        <p class="font-italic mb-0">Photographer</p>
+                    </div>
+                </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Recent posts</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+            
+
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

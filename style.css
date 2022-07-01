@@ -1,0 +1,143 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color:	#FEFFCF;
+}
+
+
+
+
+.textbox{
+    margin-top: 200px;
+    margin-left: 150px;
+    
+
+}
+h1{
+    font-size: 55px;
+    color: black;
+    font-family: sans-serif;
+    opacity: 5;
+    background: transparent;
+    text-align: left;
+    margin-left: 12px;
+  
+
+    
+}
+h2{
+    
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    width: 50%;
+    text-align: left;
+    margin-left: 12px;
+    background: transparent;
+    margin-bottom: 2px;
+    padding-top: 10px;   
+    color: #8B0000;
+ 
+}
+h3{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    width: 50%;
+    text-align: left;
+    margin-left: 12px;
+    background: transparent;
+    margin-bottom: 2px;
+    padding-top: 10px;   
+    color: #8B0000;
+
+}
+
+
+.form{
+    float: right;
+   background-color: #FEFFCF;
+    margin-top: -600px;
+    width: 400px;
+    height:500px;
+    padding: 30px;
+    border:5px solid;
+    margin-right:200px;
+    border-color: #4B4B4B;
+    border-radius: 10px;
+
+  
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+.form input{
+   
+    height: 0.5vh;;
+    background-color: #4B4B4B;
+    margin-top: 10px;
+    border:2px solid;
+    border-radius: 10px;
+    border-color: #4B4B4B;
+    margin-left: 10px;
+    padding:17px;
+    width: 332px;
+    color:white;
+}
+  
+
+button{
+    height: 11%;
+    margin-top: 50px;
+    background-color:#c02431 ;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 9px;
+    color: white;
+    font-size: 20px;
+    
+
+}
+
+.btn {
+    padding: 7px;
+    margin-top: 15px;
+   background-color: white;
+   margin-left: 60px;
+   margin-right: 60px;
+}
+.btn button{
+    background-color:#1b9c24 ;
+   
+}
+img{
+    width: 1000px;
+    height: 550px;
+    margin-top: 200px;
+    background-color: #FEFFCF;
+
+    
+}
+
+
+.forget{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    font-size: 15px;
+    color: #c02431;
+
+}
+
+
+.have_account{
+    display: flex;
+    justify-content: center;
+    margin-right:13px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #c02431;
+    
+}
+
